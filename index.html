@@ -3,8 +3,12 @@
  
 <head>
   <style>
+	   /*holy gray layout 적용 시작점*/
     *{
       box-sizing: border-box;
+	  list-style: none;
+ 	  text-decoration: none;
+	  
     }
     .container{
       border:5px solid black;
@@ -63,15 +67,59 @@
     .container footer{
       clear: both;
     }
+	 /*holy gray layout 적용 끝점*/
+	  
+/*링크와 관련된 가상클래스 선택자 시작점*/
+/*가상클래스 선택자는 위에 있는 것이 우선순위가 더 높다 */
+	  a:link {
+	  	color: red;
+	  }
+	  a:visited {
+/*visited는 보안상의 문제로 아래 4가지 속성만 사용가능*/
+	  	color: blueviolet;
+		background-color: ;
+		border-color: ;
+		outline-color: ;
+	  }
+	  a:hover{  
+	  	color: royalblue;
+	  } 
+	  a:active{
+	  	color: blanchedalmond;
+	  }
+	  a:focus{
+	  	color: snow;		  
+	  }
+/*링크와 관련된 가상클래스 선택자 끝점*/
+
   </style>
 </head>
  
 <body>
   <div class="container">
     <header>
-      <h1>HEADER</h1>
-      <h3>logout</h3>
-    </header>
+		<div class="personal">
+			 <ul id="left_nav">
+				 <li id="to_home">
+					<a href="">
+						Openletter.org
+					</a>
+				 </li>
+			 </ul>
+			 <ul id="right_nav">
+				 <li>
+					<a href="">
+						도움말
+					</a>
+				 </li>
+				 <li>
+					<a href="">
+						로그인
+					</a>
+				 </li>
+			 </ul>
+		</div>
+	</header>
     <section class="content">
       <nav>
         <ul>
