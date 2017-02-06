@@ -3,8 +3,12 @@
  
 <head>
   <style>
+ /*holy gray layout 적용 시작점*/
     *{
       box-sizing: border-box;
+	  list-style: none;
+ 	  text-decoration: none;
+	  
     }
     .container{
       border:5px solid black;
@@ -62,35 +66,131 @@
     .container footer{
       clear: both;
     }
-  </style>
+	 /*holy gray layout 적용 끝점*/
+	  
+/*링크와 관련된 가상클래스 선택자 시작점*/
+/*가상클래스 선택자는 위에 있는 것이 우선순위가 더 높다 */
+	  a:link {
+	  	color: black;
+	  }
+	  a:visited {
+/*visited는 보안상의 문제로 아래 4가지 속성만 사용가능*/
+	  	color: black;
+		background-color: ;
+		border-color: ;
+		outline-color: ;
+	  }
+	  a:hover{  
+	  	color: royalblue;
+	  } 
+	  a:active{
+	  	color: blanchedalmond;
+	  }
+	  a:focus{
+	  	color: snow;		  
+	  }
+/*링크와 관련된 가상클래스 선택자 끝점*/
+/*	  header 좌우 정렬*/
+	
+	  
+	  
+	  
+	  #left_nav,#to_home{
+		  padding-left: 0px;
+		  border: 1px solid blue;
+		  display: inline-block;
+	  }
+	  #right_nav,#help,#login{
+		  padding-left: 0px;  
+		  border: 1px solid blue;
+		  display: inline-block;
+		  float: right;
+	  }
+/*	main 본문 섹션 css*/
+	  
+	  main>div {
+		  border: 1px solid blue;
+	  	  margin: 5px;
+	  }
+	  #write{
+		  border: 1px solid blue;
+		  margin-right: 5px;
+		  float: right;
+	  }
+/* nav 섹션 css*/ 
+	  nav>ul{
+		  margin: 5px;
+		  border: 1px solid blue;
+	  }
+	  
+/*	  aside css */
+	  aside>div{
+		  border: 1px solid blue;
+		  margin: 5px;
+	  }
+/* footer css*/
+	  footer>div{
+		  border: 1px solid blue;
+		  margin: 5px;
+	  }
+	
+	</style>
 </head>
- 
 <body>
   <div class="container">
-    <header>
-      <h1>HEADER</h1>
-      <h3>logout</h3>
-    </header>
+    <header id="hedaer">
+		<div class="personal">
+			 <ul id="left_nav">
+				 <li id="to_home">
+					<a href="">
+						Openletter.org
+					</a>
+				 </li>
+			 </ul>
+			 <ul id="right_nav">
+				 <li id="help">
+					<a href="">
+						도움말
+					</a>
+				 </li>
+				 <li id="login">
+					<a href="">
+						로그인
+					</a>
+				 </li>
+			 </ul>
+		</div>
+	</header>
     <section class="content">
       <nav>
         <ul>
-          <li>사람P</li>
-          <li>나에 대해서S</li>
-          <li>나의 미래S</li>
+          <li><a href="">사람P</a></li>
+          <li><a href="">나에 대해서S</a></li>
+          <li><a href="">나의 미래S</a></li>
         </ul>
       </nav>
       <main>
-        제목, 이메일, 작성일, 본문,
+       	<div>제목</div>
+       	<div>이메일</div>
+       	<div>작성일</div>
+       	<div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem facere itaque nisi ipsum voluptate alias, ea vitae nemo, voluptas facilis sunt tenetur harum quos cumque unde aut obcaecati atque modi nobis. Maxime molestias, veritatis alias sapiente quo fugiat provident. Provident totam asperiores laboriosam dignissimos, cupiditate, voluptatum dolore nam repellat architecto minus consequuntur. Officiis magni reprehenderi!
-        ,제출
+        ,</div>
+        <a href="" id="write">글쓰기</a>
       </main>
       <aside>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, possimus 
+       <div>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, possimus 
+       </div>
       </aside>
     </section>
     <footer>
-      FOOTER
-      email, github
+      <div>
+      	e-mail: tuntunkimpo@naver.com
+      </div>
+      <div>
+      	github: tuntunkimpo
+      </div>
     </footer>
   </div>
 </body>
