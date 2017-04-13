@@ -3,30 +3,58 @@
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <style>
-/* article masonry layout start */
+/* img transition */
+article img {
+/*
+    width: 100%;
+    height: 100%;
+*/
+    background: red;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    transition: width 2s, height 2s, transform 1s;
+}
+
+article img:hover {
+/*
+    width: 100px;
+    height: 100px;
+*/
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);
+}           
            
-           #columns{
-               column-width: 200px;
-/*               border: 5px solid green;*/
-               column-gap: 20px;
-           }
-           #columns figure{
-               display: inline-block;
-               border: 1px solid rgba(0,0,0,0.2);
-               margin: 0;
-               margin-bottom: 15px;
-               padding:10px;
-               box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-           }
-           #columns figure img{
-               width: 100%;
-           }
-           #columns figure figcaption{
-               border-top: 1px solid rgba(0,0,0,0.2);
-               padding: 10px;
-               margin-top: 10px;
-           }
 /* article masonry layout start */
+footer{
+   padding: 20px;
+/*   border: 1px solid black;*/
+   height: 10%;
+   text-align: center;
+   font-size: 50px;
+   text-shadow: 3px 2px rgb(132, 70, 70);
+}
+
+#columns{
+   column-width: 200px;
+/*               border: 5px solid green;*/
+   column-gap: 20px;
+}
+#columns figure{
+   display: inline-block;
+   border: 1px solid rgba(0,0,0,0.2);
+   margin: 0;
+   margin-bottom: 15px;
+   padding:10px;
+   box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+#columns figure img{
+   width: 100%;
+}
+#columns figure figcaption{
+   border-top: 1px solid rgba(0,0,0,0.2);
+   padding: 10px;
+   margin-top: 10px;
+}
+/* article masonry layout end */
 
            
 /* slideshow w3school start */
@@ -77,7 +105,7 @@ header img{
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 50px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -130,52 +158,49 @@ header img{
            
            
 /* slideshow w3school end */
-           header{
-               border: 1px solid green;
-               height: 28%;
-               
-           }
-           article{
-               margin-top: 20px;
-                border: 1px solid blue;              
-                padding: 2px;
-                   width: 100%;
+header{
+/*   border: 1px solid green;*/
+   height: 28%;
+
+}
+article{
+   margin-top: 20px;
+/*    border: 1px solid blue;              */
+    padding: 2px;
+       width: 100%;
 /*                height: 60%;*/
-           }
-           
-           }
-           footer{
-               border: 1px solid black;
-               height: 10%;
-           }
-           @media screen and (min-width:600px) {
-              section {
-                display: inline-block;
-                width: 24%;
+}
 
-               }
-            }
 
-        </style>
+
+@media screen and (min-width:600px) {
+  section {
+    display: inline-block;
+    width: 24%;
+
+   }
+}
+
+</style>
     </head>
     <body>
                 
         <header>
             <div class="slideshow-container">
             <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
+            <div class="numbertext">1</div>
             <img src="1.jpg">
             <div class="text">Caption Text</div>
             </div>
 
             <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
+            <div class="numbertext">2</div>
             <img src="2.jpg">
             <div class="text">Caption Two</div>
             </div>
 
             <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
+            <div class="numbertext">3</div>
             <img src="3.jpg">
             <div class="text">Caption Three</div>
             </div>
@@ -242,7 +267,7 @@ header img{
             </div>   
         </article>
         <footer>
-            footer
+            presented by bill
         </footer>
         <script>
             var slideIndex = 1;
